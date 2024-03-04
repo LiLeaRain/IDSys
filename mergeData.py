@@ -1,41 +1,57 @@
 import pandas as pd
+import numpy as np
+import os
+from tqdm import tqdm
 
+# 指定包含多个CSV文件的文件夹路径
+folder_path = '.\\data\\IDS2017\\MachineLearningCVE'
 
-# 按行合并多个Dataframe数据
-def mergeData():
-    monday = writeData(".\\data\\ids2017\\MachineLearningCVE\\Monday-WorkingHours.pcap_ISCX.csv")
+# 定义处理单个CSV文件的函数
+def clean_csv(file_path):
+    """
+    参数：
+    - file_path (str): CSV文件的路径
 
-    # 剔除第一行属性特征名称
-    monday = monday.drop([0])
-    friday1 = writeData(".\\data\\ids2017\\MachineLearningCVE\\Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv")
-    friday1 = friday1.drop([0])
-    friday2 = writeData(".\\data\\ids2017\\MachineLearningCVE\\Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv")
-    friday2 = friday2.drop([0])
-    friday3 = writeData(".\\data\\ids2017\\MachineLearningCVE\\Friday-WorkingHours-Morning.pcap_ISCX.csv")
-    friday3 = friday3.drop([0])
-    thursday1 = writeData(".\\data\\ids2017\\MachineLearningCVE\\Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv")
-    thursday1 = thursday1.drop([0])
-    thursday2 = writeData(".\\data\\ids2017\\MachineLearningCVE\\Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv")
-    thursday2 = thursday2.drop([0])
-    tuesday = writeData(".\\data\\ids2017\\MachineLearningCVE\\Tuesday-WorkingHours.pcap_ISCX.csv")
-    tuesday = tuesday.drop([0])
-    wednesday = writeData(".\\data\\ids2017\\MachineLearningCVE\\Wednesday-workingHours.pcap_ISCX.csv")
-    wednesday = wednesday.drop([0])
-    frame = [monday, friday1, friday2, friday3, thursday1, thursday2, tuesday, wednesday]
+    返回值：
+    - df (DataFrame): 清洗后的DataFrame对象
+    """
+    df = pd.read_csv(file_path)
 
-    # 合并数据
-    result = pd.concat(frame)
-    list = clearDirtyData(result)
-    result = result.drop(list)
-    return result
+    # 去除含有NaN和Inf的行
+    df = df.dropna()
+    df = df[~df.isin([np.nan, np.inf, -np.inf]).any(axis=1)]  # 指定轴为1，以确保逐行进行检查
+    df.reset_index(drop=True, inplace=True)  # 重置索引
 
+    return df
 
-# 清除CIC-IDS数据集中的脏数据，第一行特征名称和含有Nan、Infiniti等数据的行数
-def clearDirtyData(df):
-    dropList = df[(df[14] == "Nan") | (df[15] == "Infinity")].index.tolist()
-    return dropList
+# 定义合并多个CSV文件的函数
+def merge_csv_files(folder_path):
+    """
+    参数：
+    - folder_path (str): 包含多个CSV文件的文件夹路径
 
+    返回值：
+    - merged_df (DataFrame): 整合后的DataFrame对象
+    """
+    all_dfs = []
+    files = [f for f in os.listdir(folder_path) if f.endswith('.csv')]
+    # 使用tqdm来显示进度条
+    processed_files = tqdm(files, desc="Processing CSV files")
+    for filename in processed_files:
+        file_path = os.path.join(folder_path, filename)
+        # 显示当前处理的文件名及整个处理过程的进度
+        processed_files.set_postfix({"File": filename, "Progress": processed_files.n})
+        df = clean_csv(file_path)
+        all_dfs.append(df)
 
-raw_data = mergeData()
-file = 'data/total.csv'
-raw_data.to_csv(file, index=False, header=False)
+    merged_df = pd.concat(all_dfs, ignore_index=True)
+    return merged_df
+
+# 合并多个CSV文件
+merged_data = merge_csv_files(folder_path)
+
+# 将整合后的数据保存到新的CSV文件中
+merged_data.to_csv('.\\data\\IDS2017\\MachineLearningCVE\\merged_data.csv', index=False)
+
+# 显示处理结果
+print("数据处理完成！合并后的数据已保存到 merged_data.csv 文件中。")

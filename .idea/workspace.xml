@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b80423fd-d04e-4c81-856b-643100b121bf" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/IDSys.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataIntegration.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="b80423fd-d04e-4c81-856b-643100b121bf" name="更改" comment="初步框架，包含模型框架和数据剔除整合代码">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mergeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/mergeData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +41,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.IDSys.executor": "Run",
+    "Python.mergeData(Test).executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/lhxli/OneDrive/Graduation Project/repo/IDSys",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,16 +61,14 @@
       <recent name="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys\data\IDS2017\MachineLearningCVE" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.mergeData(Test)">
     <configuration name="IDSys" type="PythonConfigurationType" factoryName="Python">
       <module name="IDSys" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.10 (IDSys)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -112,6 +106,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="mergeData(Test)" type="PythonConfigurationType" factoryName="Python">
+      <module name="IDSys" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.10 (IDSys)" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys\mergeData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.IDSys" />
+      <item itemvalue="Python.mergeData(Test)" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -129,11 +148,24 @@
       <option name="presentableId" value="Default" />
       <updated>1709543987710</updated>
       <workItem from="1709544003921" duration="13000" />
-      <workItem from="1709554566545" duration="4483000" />
+      <workItem from="1709554566545" duration="6440000" />
     </task>
+    <task id="LOCAL-00001" summary="初步框架，包含模型框架和数据剔除整合代码">
+      <option name="closed" value="true" />
+      <created>1709560250462</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709560250462</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初步框架，包含模型框架和数据剔除整合代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步框架，包含模型框架和数据剔除整合代码" />
   </component>
 </project>
