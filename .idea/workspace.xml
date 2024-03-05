@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b80423fd-d04e-4c81-856b-643100b121bf" name="更改" comment="fix">
-      <change afterPath="$PROJECT_DIR$/dataProcessing.py" afterDir="false" />
+    <list default="true" id="b80423fd-d04e-4c81-856b-643100b121bf" name="更改" comment="init CSDN1">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_Python.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preProData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mergeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/mergeData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statLabels.py" beforeDir="false" afterPath="$PROJECT_DIR$/statLabels.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +25,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -49,7 +58,8 @@
     "Python.stat.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "CSDN1",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/lhxli/OneDrive/Graduation Project/repo/IDSys/dataProcessing.py",
     "node.js.detected.package.eslint": "true",
@@ -187,7 +197,7 @@
       <workItem from="1709554566545" duration="8791000" />
       <workItem from="1709564756667" duration="930000" />
       <workItem from="1709600933933" duration="8211000" />
-      <workItem from="1709618851138" duration="1020000" />
+      <workItem from="1709618851138" duration="2679000" />
     </task>
     <task id="LOCAL-00001" summary="初步框架，包含模型框架和数据剔除整合代码">
       <option name="closed" value="true" />
@@ -229,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709604565015</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init CSDN1">
+      <option name="closed" value="true" />
+      <created>1709620129762</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709620129762</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +259,8 @@
     <MESSAGE value="处理已标记数据时有编码错误，添加跳过功能" />
     <MESSAGE value="增加标签统计代码，修复bug" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="init CSDN1" />
+    <option name="LAST_COMMIT_MESSAGE" value="init CSDN1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDSys$stat.coverage" NAME="stat 覆盖结果" MODIFIED="1709602648848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys" />
