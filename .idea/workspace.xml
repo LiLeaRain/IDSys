@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b80423fd-d04e-4c81-856b-643100b121bf" name="更改" comment="增加标签统计代码，修复bug" />
+    <list default="true" id="b80423fd-d04e-4c81-856b-643100b121bf" name="更改" comment="fix">
+      <change afterPath="$PROJECT_DIR$/dataProcessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mergeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/mergeData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statLabels.py" beforeDir="false" afterPath="$PROJECT_DIR$/statLabels.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,12 +44,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.IDSys.executor": "Run",
+    "Python.dataPro.executor": "Run",
     "Python.mergeData(Test).executor": "Run",
     "Python.stat.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/lhxli/OneDrive/Graduation Project/repo/IDSys",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/lhxli/OneDrive/Graduation Project/repo/IDSys/dataProcessing.py",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,7 +67,7 @@
       <recent name="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys\data\IDS2017\MachineLearningCVE" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.stat">
+  <component name="RunManager" selected="Python.dataPro">
     <configuration name="IDSys" type="PythonConfigurationType" factoryName="Python">
       <module name="IDSys" />
       <option name="ENV_FILES" value="" />
@@ -84,21 +92,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="dataPro" type="PythonConfigurationType" factoryName="Python">
       <module name="IDSys" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="SDK_NAME" value="Python 3.10 (IDSys)" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataProcessing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,6 +118,9 @@
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.10 (IDSys)" />
       <option name="WORKING_DIRECTORY" value="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys" />
@@ -133,6 +142,9 @@
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.10 (IDSys)" />
       <option name="WORKING_DIRECTORY" value="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys" />
@@ -140,7 +152,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys\statLabels.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/statLabels.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,9 +162,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.stat" />
       <item itemvalue="Python.IDSys" />
       <item itemvalue="Python.mergeData(Test)" />
+      <item itemvalue="Python.stat" />
+      <item itemvalue="Python.dataPro" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -173,7 +186,8 @@
       <workItem from="1709544003921" duration="13000" />
       <workItem from="1709554566545" duration="8791000" />
       <workItem from="1709564756667" duration="930000" />
-      <workItem from="1709600933933" duration="3592000" />
+      <workItem from="1709600933933" duration="8211000" />
+      <workItem from="1709618851138" duration="1020000" />
     </task>
     <task id="LOCAL-00001" summary="初步框架，包含模型框架和数据剔除整合代码">
       <option name="closed" value="true" />
@@ -207,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709604295795</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix">
+      <option name="closed" value="true" />
+      <created>1709604565015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709604565015</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +240,8 @@
     <MESSAGE value="完成脏数据剔除代码，加入进度条库" />
     <MESSAGE value="处理已标记数据时有编码错误，添加跳过功能" />
     <MESSAGE value="增加标签统计代码，修复bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加标签统计代码，修复bug" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDSys$stat.coverage" NAME="stat 覆盖结果" MODIFIED="1709602648848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\lhxli\OneDrive\Graduation Project\repo\IDSys" />

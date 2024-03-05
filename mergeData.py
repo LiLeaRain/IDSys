@@ -18,7 +18,7 @@ def clean_csv(file_path):
     - df (DataFrame): 清洗后的DataFrame对象
     """
     try:
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(file_path, encoding='utf-8')
     except UnicodeDecodeError:
         print(f"Skipping file due to encoding error: {file_path}")
         return None
@@ -60,7 +60,7 @@ def merge_csv_files(folder_path):
 merged_data = merge_csv_files(folder_path)
 
 # 将整合后的数据保存到新的CSV文件中
-merged_data.to_csv(f'{folder_path}\\{merged_path}', index=False)
+merged_data.to_csv(f'{folder_path}\\{merged_path}', index=False, encoding='utf-8')
 
 # 显示处理结果
 print("数据处理完成！合并后的数据已保存到 merged_data.csv 文件中。")
